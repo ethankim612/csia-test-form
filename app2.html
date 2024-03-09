@@ -1,0 +1,74 @@
+a<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>CSIA</title>
+        <link href="./bootstrap.min.css" rel="stylesheet">
+        <link href="./bootstrap-datepicker3.min.css" rel="stylesheet">
+        <script src="./jquery-3.4.1.slim.min.js"></script>
+        <script src="./bootstrap-datepicker.min.js"></script>
+        <!--https://uxsolutions.github.io/bootstrap-datepicker/?markup=input&format=&weekStart=&startDate=&endDate=&startView=0&minViewMode=0&maxViewMode=4&todayBtn=false&clearBtn=false&language=en&orientation=auto&multidate=&multidateSeparator=&autoclose=on&keyboardNavigation=on&forceParse=on#sandbox-->
+        <style>
+            html,
+            body {
+            height: 100%;
+            }
+    
+            .form-signin {
+            max-width: 330px;
+            padding: 1rem;
+            }
+    
+            .form-signin .form-floating:focus-within {
+            z-index: 2;
+            }
+    
+            .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            }
+    
+            .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            }
+        </style>
+    </head>
+<body class="d-flex align-items-center py-4 bg-body-tertiary">  
+    <main class="form-signin w-100 m-auto">
+        <h1 class="h3 mb-3 fw-normal">야자 신청</h1>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">일자 선택</label>
+                <input id="date_select" type="text" class="form-control" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">시간별 야자 내용 입력</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">1교시</span>
+                    <input type="text" class="form-control" placeholder="20글자이내로 작성" aria-label="time1" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">2교시</span>
+                    <input type="text" class="form-control" placeholder="20글자이내로 작성" aria-label="time2" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">3교시</span>
+                    <input type="text" class="form-control" placeholder="20글자이내로 작성" aria-label="time3" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">야자신청 등록</button>
+            <a class="btn btn-primary" href="./main.html" role="button">돌아가기</a>
+        </form>
+    </main>
+<script src="./bootstrap.bundle.min.js"></script>
+<script>
+    $('#date_select').datepicker({
+        format: "yyyy-mm-dd",
+        autoclose: true
+    });
+</script>
+</body>
+</html>
